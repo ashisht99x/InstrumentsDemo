@@ -23,17 +23,18 @@ class ATSmileyTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    /* //memory growth
+     //memory growth
     func setSmileyImage(image: UIImage) {
         let imageView = UIImageView(frame: CGRectMake(10, 10, 80, 80))
         self.addSubview(imageView)
         imageView.image = image
     }
-    */
-    
+
+    /*
     func setSmileyImage(image: UIImage) {
         smileyImageView.image = image
     }
+    */
     
     func setSmileyName (name: String) {
         label.text = name

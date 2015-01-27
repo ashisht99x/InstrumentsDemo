@@ -27,7 +27,6 @@ class ViewController: UITableViewController {
         return smileysDao.getSmileys().count
     }
 
-    /*
     // synchronous call
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("SmileyCell") as ATSmileyTableViewCell
@@ -36,9 +35,8 @@ class ViewController: UITableViewController {
         cell.smileyImageView.image = smiley.getImage()
         return cell
     }
-    */
     
-    
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("SmileyCell") as ATSmileyTableViewCell
         
@@ -53,6 +51,7 @@ class ViewController: UITableViewController {
     
         return cell
     }
+    */
 
 }
 
