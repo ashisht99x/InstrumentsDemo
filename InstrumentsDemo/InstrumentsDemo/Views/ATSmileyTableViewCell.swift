@@ -23,4 +23,10 @@ class ATSmileyTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setSmileyImage(image: UIImage) {
+        let imageView = UIImageView(frame: CGRectMake(10, 10, 80, 80))
+        self.addSubview(imageView)
+        imageView.image = image
+    }
 }

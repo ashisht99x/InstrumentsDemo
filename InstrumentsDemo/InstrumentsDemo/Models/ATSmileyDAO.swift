@@ -11,11 +11,11 @@ import Foundation
 class ATSmileyDAO {
     
     let jsonName = "Smileys.json"
-    let serverUrl = "http://localhost:8080/"
-    private var smileyData: Array<ATSmiley>!
+    let serverUrl = "http://10.133.20.133:8000/"
+    private var smileys: Array<ATSmiley>!
     
     init() {
-      smileyData = smileysArray()
+      self.smileys = smileysArray()
     }
     
     class var sharedInstance: ATSmileyDAO {
@@ -28,8 +28,8 @@ class ATSmileyDAO {
         return Singleton.instance
     }
     
-    func getSmileyInfo() -> Array<ATSmiley> {
-        return smileyData
+    func getSmileys() -> Array<ATSmiley> {
+        return self.smileys
     }
     
     private func smileysArray() -> Array<ATSmiley> {
