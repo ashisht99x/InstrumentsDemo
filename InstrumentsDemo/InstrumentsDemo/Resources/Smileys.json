@@ -1,0 +1,41 @@
+{
+	"smileys" : [
+		{
+			"name": "celebrity"
+		},
+		{
+			"name": "cool"
+		},
+		{
+			"name": "crying"
+		},
+		{
+			"name": "devil"
+		},
+		{
+			"name": "drunk"
+		},
+		{
+			"name": "happy"
+		},
+		{
+			"name": "kiss"
+		},
+		{
+			"name": "rofl"
+		},
+		{
+			"name": "sad"
+		},
+		{
+			"name": "sleeping"
+		},
+		{
+			"name": "speechless"
+		},
+		{
+			"name": "vampire"
+		}
+
+	]
+}

@@ -13,6 +13,10 @@
 		B1FC05D61A7773250075FB6F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1FC05D41A7773250075FB6F /* LaunchScreen.xib */; };
 		B1FC05E21A7773250075FB6F /* InstrumentsDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC05E11A7773250075FB6F /* InstrumentsDemoTests.swift */; };
 		B1FC05F51A7775FB0075FB6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC05F21A7775FB0075FB6F /* ViewController.swift */; };
+		B1FC05F71A7778360075FB6F /* ATSmileyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC05F61A7778360075FB6F /* ATSmileyTableViewCell.swift */; };
+		B1FC05F91A77799D0075FB6F /* ATSmiley.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC05F81A77799D0075FB6F /* ATSmiley.swift */; };
+		B1FC05FB1A777BD50075FB6F /* ATSmileyDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FC05FA1A777BD50075FB6F /* ATSmileyDAO.swift */; };
+		B1FC05FE1A7795D90075FB6F /* Smileys.json in Resources */ = {isa = PBXBuildFile; fileRef = B1FC05FD1A7795D90075FB6F /* Smileys.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		B1FC05E01A7773250075FB6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1FC05E11A7773250075FB6F /* InstrumentsDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsDemoTests.swift; sourceTree = "<group>"; };
 		B1FC05F21A7775FB0075FB6F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B1FC05F61A7778360075FB6F /* ATSmileyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSmileyTableViewCell.swift; sourceTree = "<group>"; };
+		B1FC05F81A77799D0075FB6F /* ATSmiley.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSmiley.swift; sourceTree = "<group>"; };
+		B1FC05FA1A777BD50075FB6F /* ATSmileyDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ATSmileyDAO.swift; sourceTree = "<group>"; };
+		B1FC05FD1A7795D90075FB6F /* Smileys.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Smileys.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		B1FC05C81A7773250075FB6F /* InstrumentsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B1FC05FC1A7795D90075FB6F /* Resources */,
 				B1FC05F11A7775FB0075FB6F /* Controllers */,
 				B1FC05F31A7775FB0075FB6F /* Models */,
 				B1FC05F41A7775FB0075FB6F /* Views */,
@@ -125,6 +134,8 @@
 		B1FC05F31A7775FB0075FB6F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B1FC05F81A77799D0075FB6F /* ATSmiley.swift */,
+				B1FC05FA1A777BD50075FB6F /* ATSmileyDAO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,8 +143,17 @@
 		B1FC05F41A7775FB0075FB6F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1FC05F61A7778360075FB6F /* ATSmileyTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B1FC05FC1A7795D90075FB6F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B1FC05FD1A7795D90075FB6F /* Smileys.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +238,7 @@
 			files = (
 				B1FC05D11A7773250075FB6F /* Main.storyboard in Resources */,
 				B1FC05D61A7773250075FB6F /* LaunchScreen.xib in Resources */,
+				B1FC05FE1A7795D90075FB6F /* Smileys.json in Resources */,
 				B1FC05D31A7773250075FB6F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,8 +257,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1FC05F71A7778360075FB6F /* ATSmileyTableViewCell.swift in Sources */,
+				B1FC05F91A77799D0075FB6F /* ATSmiley.swift in Sources */,
 				B1FC05F51A7775FB0075FB6F /* ViewController.swift in Sources */,
 				B1FC05CC1A7773250075FB6F /* AppDelegate.swift in Sources */,
+				B1FC05FB1A777BD50075FB6F /* ATSmileyDAO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
