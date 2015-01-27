@@ -21,8 +21,14 @@ class ATSmiley {
     func getImage () -> UIImage {
         
         var data = NSData(contentsOfURL: NSURL(string: self.imageUrl)!)
-        var image = UIImage(data: data!)
-        return image!
+        if let sureData = data {
+            var image = UIImage(data: data!)
+            if let sureImage = image {
+                return sureImage
+            }
+        }
+        
+        return UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("placeholder", ofType: "png")!)!
     }
     
     func getImage (completionCallback : (UIImage)-> ()) {

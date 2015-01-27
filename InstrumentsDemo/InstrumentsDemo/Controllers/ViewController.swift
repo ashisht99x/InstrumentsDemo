@@ -27,6 +27,7 @@ class ViewController: UITableViewController {
         return smileysDao.getSmileys().count
     }
 
+    /*
     // synchronous call
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("SmileyCell") as ATSmileyTableViewCell
@@ -35,23 +36,29 @@ class ViewController: UITableViewController {
         cell.smileyImageView.image = smiley.getImage()
         return cell
     }
+    */
     
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("SmileyCell") as ATSmileyTableViewCell
         
         let smiley = smileysDao.getSmileys()[indexPath.row]
+        cell.setSmileyName(smiley.name)
+        
+        cell.setSmileyImage(UIImage(named: "placeholder.png")!)
+        
+        //cell.setSmileyImage(UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("placeholder", ofType: "png")!)!)
+        
         smiley.getImage(){(image: UIImage) -> () in
             var fetchedCell = tableView.cellForRowAtIndexPath(indexPath) as? ATSmileyTableViewCell
             if let sureCell = fetchedCell {
                 fetchedCell!.setSmileyImage(image)
-                fetchedCell!.setSmileyName(smiley.name)
             }
         }
     
         return cell
     }
-    */
+    
 
 }
 
