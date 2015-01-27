@@ -11,7 +11,7 @@ import Foundation
 class ATSmileyDAO {
     
     let jsonName = "Smileys.json"
-    let serverUrl = "http://10.133.20.133:8000/"
+    let serverUrl = "http://ashisht99x.github.io/Smileys/"
     private var smileys: Array<ATSmiley>!
     
     init() {

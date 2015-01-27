@@ -25,5 +25,15 @@ class ATSmiley {
         return image!
     }
     
+    func getImage (completionCallback : (UIImage)-> ()) {
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)){
+            let image = self.getImage()
+            dispatch_async(dispatch_get_main_queue()){
+                completionCallback(image)
+                
+            }
+        }
+    }
     
 }
