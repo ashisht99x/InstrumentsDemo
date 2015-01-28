@@ -32,13 +32,16 @@ class ViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("SmileyCell") as ATSmileyTableViewCell
         
+        //following TAPAN's advice that synchronous calls on UI thread are the best mechanism for fetching images
         let smiley = smileysDao.getSmileys()[indexPath.row]
+        cell.setSmileyName(smiley.name)
         cell.smileyImageView.image = smiley.getImage()
         return cell
     }
 
     
     /*
+    //following TAPAN's update that synchronous calls on UI thread are the worst mechanism for fetching images
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("SmileyCell") as ATSmileyTableViewCell
         
